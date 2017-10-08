@@ -38,7 +38,7 @@ nextcloudVersion='latest.tar.bz2'
 # D75899B9A724937A is default
 gpgKey='D75899B9A724937A'
 
-# Path to NextCloud.
+# Path to NextCloud. Feel free to change this.
 nc_home='/var/www/vhosts'
 
 # Defaut is a random 32 char pw for NextCloud db admin user.
