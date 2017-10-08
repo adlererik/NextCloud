@@ -31,7 +31,7 @@ email='mymail@protonmail.com'
 
 # Change to version of NextCloud to download if not latest.
 # latest.tar.bz2 is default
-nextcloudVersion='latest.tar.bz2' 
+nextcloudVersion='latest.tar.bz2'
 
 # Public gpg key used to verify NextCloud
 # The key can be found at https://nextcloud.com/nextcloud.asc
@@ -41,7 +41,7 @@ gpgKey='D75899B9A724937A'
 # Path to NextCloud.
 nc_home='/var/www/vhosts'
 
-# Defaut is a random 32 char pw for NC db.  You can use your own though.
+# Defaut is a random 32 char pw for NextCloud db admin user.
 # A backup can be found under /root/admin_pw_backup.txt if needed.
 db_admin_pw="$(tr -cd '[:alnum:]' < /dev/urandom | fold -w32 | head -n1)"
 
@@ -52,7 +52,7 @@ db_admin_pw="$(tr -cd '[:alnum:]' < /dev/urandom | fold -w32 | head -n1)"
 
 hostName="$(hostname)"
 
-apt-get update -y && sudo apt-get update -y
+apt-get update -y && sudo apt-get upgrade -y
 
 # Apache2 and php7.0-fpm stuff
 apt-get install apache2 -y
